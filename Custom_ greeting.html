@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang=en-US>
+
+<head>
+    <meta charset=utf-8 />
+    <title>Custom Greeting</title>
+</head>
+
+<body>
+    <p id="write"></p>
+    <script type="text/javascript">
+        //Javascript program to provide
+        //a greeting to the user based off of what time it is
+
+        ////Pop-up Box that allows for user to input final exam grade. Also sets the variable for the final exam grade.
+        var name = prompt("What is your name?");
+        //Sets the variable for time by getting the date and time from the system
+        var time = new Date().getHours();
+        //Sets the condition for the value of time that will display morning
+        if (time > 5 && time < 12) {
+            document.getElementById("write").innerHTML = "Good morning, " + name + "!";
+        }
+        //Sets the condition for the value of time that will display afternoon
+        else if (time > 12 && time < 17) {
+            document.getElementById("write").innerHTML = "Good afternoon, " + name + "!";
+        }
+        //Sets the condition for the value of time that will display evening
+        else if (time > 17 && time < 23) {
+            document.getElementById("write").innerHTML = "Good evening, " + name + "!";
+        }
+        //Sets the condition for the value of time that will display night
+        else if (time > 23 && time < 5) {
+            document.getElementById("write").innerHTML = "Good night, " + name + "!";
+        }
+
+    </script>
+</body>
+
+</html>
